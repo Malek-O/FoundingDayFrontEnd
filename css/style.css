@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+
+@font-face {
+    font-family: harir;
+    src: url(/webfonts/harir.otf);
+}
+
+body {
+    font-family: 'harir', serif;
+    background-color: #FEFBF0;
+    overflow: hidden;
+}
+
+:root {
+    --secondary-color: #F3EBD9;
+}
+
+/* Start Navbar */
+
+.bg-nav {
+    background-color: var(--secondary-color);
+}
+
+.wh-sp {
+    white-space: nowrap;
+}
+
+.z-nav {
+    z-index: 9999;
+    box-shadow: -1px 3px 5px 0px rgba(219, 216, 199, 0.75);
+}
+
+/* End Navbar */
+
+/* Start main section */
+
+.sm-img {
+    width: 25%;
+}
+
+.bg-btn {
+    background-color: #856B64;
+    color: white;
+}
+
+.bg-btn:hover {
+    background-color: #4b3c38;
+    color: white;
+}
+
+.sid-img {
+    background-image: url(/imgs/hg.png);
+    background-size: 70%;
+    background-position: 0 75px;
+    width: 50%;
+    height: 100000vh;
+    opacity: 0.2;
+}
+
+.font-h {
+    font-size: 6rem;
+}
+
+.img1-abs {
+    position: absolute;
+    width: 45%;
+    z-index: 99;
+    right: 0;
+    bottom: 0;
+}
+
+.img2-abs {
+    position: absolute;
+    width: 40%;
+    right: 6rem;
+    bottom: 0;
+    opacity: 0.2;
+}
+
+/* End main section */
+
+
+/* Start Media Screen */
+
+@media screen and (max-width: 768px) {
+    .sm-img {
+        width: 45%;
+    }
+
+    .sid-img {
+        background-image: url(/imgs/hg.png);
+        background-size: 10%;
+        background-position: 0 75px;
+        width: 100vw;
+        height: 10vh;
+        opacity: 0.5;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .font-h {
+        font-size: 4rem;
+    }
+
+    .img1-abs {
+        position: absolute;
+        width: 70%;
+        z-index: 99;
+        right: 0;
+        bottom: 0;
+    }
+
+    .img2-abs {
+        position: absolute;
+        width: 60%;
+        right: 3rem;
+        bottom: 0;
+        opacity: 0.2;
+    }
+}
+
+/* End Media Screen */
+
+
+/* Start aniamation */
+.rotate {
+    animation: rotation 20s infinite linear;
+}
+
+.forward {
+    animation: mover 200s linear infinite;
+}
+
+@keyframes mover {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2000px);
+    }
+
+}
+
+@keyframes rotation {
+    from {
+        transform: (0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* End Media aniamation */
